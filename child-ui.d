@@ -5,7 +5,7 @@
  */
 unsigned long long indention;
 
-objc$target:*::entry
+objc$target:_UI*::entry
 {
     method = (string)&probefunc[1];
     type = probefunc[0];
@@ -14,7 +14,7 @@ objc$target:*::entry
     indention++;
 }
 
-objc$target:::return
+objc$target:_UI*::return
 {
     indention--;
     method = (string)&probefunc[1];

@@ -14,7 +14,7 @@ proc:::exec-success
 {
     gTargetPID = pid;
     printf("started %s\n", execname);
-    system("sudo dtrace -qws child.d -p %d", pid);
+    system("sudo dtrace -qws child-ui.d -p %d", pid);
 }
 
 
