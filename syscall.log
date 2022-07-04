@@ -1,0 +1,343 @@
+started simpleui
+kevent_id
+psynch_mutexwait
+psynch_mutexdrop
+workq_kernreturn
+kevent_id
+workq_kernreturn
+workq_kernreturn
+geteuid
+geteuid
+geteuid
+bsdthread_ctl
+geteuid
+bsdthread_ctl
+geteuid
+geteuid
+geteuid
+geteuid
+bsdthread_ctl
+stat64 /Users/Nikolay.Igotti/Library/Developer/Xcode/DerivedData/simpleui-deyecdhvvddjkcetyqoasfdfurua/Build/Products/Debug-iphonesimulator/libRosetta.dylib
+stat64 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/introspection/libRosetta.dylib
+stat64 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libRosetta.dylib
+stat64 /usr/lib/libRosetta.dylib
+open /usr/lib/libRosetta.dylib
+open /usr/lib
+fcntl
+close
+access /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/AppleInternal
+proc_info
+open /Users/Nikolay.Igotti/Library/Developer/CoreSimulator/Devices/99278DD2-6986-4118-8C22-A4EE706D0CD6/data/Containers/Bundle/Application/4F7C64C3-C9DA-4EAC-A2F6-D7C374678811/simpleui.app/simpleui
+read
+lseek
+read
+lseek
+read
+read
+lseek
+read
+close
+proc_info
+open /Users/Nikolay.Igotti/Library/Developer/CoreSimulator/Devices/99278DD2-6986-4118-8C22-A4EE706D0CD6/data/Containers/Bundle/Application/4F7C64C3-C9DA-4EAC-A2F6-D7C374678811/simpleui.app/simpleui
+read
+lseek
+read
+lseek
+read
+read
+lseek
+read
+close
+proc_info
+open /Users/Nikolay.Igotti/Library/Developer/CoreSimulator/Devices/99278DD2-6986-4118-8C22-A4EE706D0CD6/data/Containers/Bundle/Application/4F7C64C3-C9DA-4EAC-A2F6-D7C374678811/simpleui.app/simpleui
+read
+lseek
+read
+lseek
+read
+read
+lseek
+read
+close
+proc_info
+open /Users/Nikolay.Igotti/Library/Developer/CoreSimulator/Devices/99278DD2-6986-4118-8C22-A4EE706D0CD6/data/Containers/Bundle/Application/4F7C64C3-C9DA-4EAC-A2F6-D7C374678811/simpleui.app/simpleui
+read
+lseek
+read
+lseek
+read
+read
+lseek
+read
+close
+proc_info
+open /Users/Nikolay.Igotti/Library/Developer/CoreSimulator/Devices/99278DD2-6986-4118-8C22-A4EE706D0CD6/data/Containers/Bundle/Application/4F7C64C3-C9DA-4EAC-A2F6-D7C374678811/simpleui.app/simpleui
+read
+lseek
+read
+lseek
+read
+read
+lseek
+read
+close
+proc_info
+open /Users/Nikolay.Igotti/Library/Developer/CoreSimulator/Devices/99278DD2-6986-4118-8C22-A4EE706D0CD6/data/Containers/Bundle/Application/4F7C64C3-C9DA-4EAC-A2F6-D7C374678811/simpleui.app/simpleui
+read
+lseek
+read
+lseek
+read
+read
+lseek
+read
+close
+lstat64
+lstat64
+stat64 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/TextInput.framework
+access /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/TextInput.framework
+stat64 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/TextInput.framework
+access /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/TextInput.framework
+open_nocancel /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/TextInput.framework
+fstatfs64
+getdirentries64
+close_nocancel
+stat64 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/TextInput.framework
+open_nocancel /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/TextInput.framework
+fstatfs64
+getdirentries64
+close_nocancel
+open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/TextInput.framework/Info.plist
+fstat64
+read
+close
+stat64 /Users/Nikolay.Igotti/Library/Developer/Xcode/DerivedData/simpleui-deyecdhvvddjkcetyqoasfdfurua/Build/Products/Debug-iphonesimulator/GraphicsServices.framework/GraphicsServices
+stat64 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/TextInput/TextInput_dictation.bundle
+stat64 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/TextInput/TextInput_mul.bundle
+open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/TextInput/TextInput_mul.bundle/InputMode_dictation.plist
+open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/TextInput/TextInput_mul.bundle/Resources/InputMode_dictation.plist
+writev
+open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/KeyboardLayouts/USBKeyboardLayouts.bundle/USBKeyboardLayouts.plist
+fstat64
+fcntl
+fstatfs64
+mmap
+close
+open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/KeyboardLayouts/USBKeyboardLayouts.bundle/uchrs/US.uchr
+stat64 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/KeyboardLayouts/USBKeyboardLayouts.bundle/uchrs/US.uchr
+sysctl
+mmap
+writev
+geteuid
+__mac_syscall
+geteuid
+__mac_syscall
+geteuid
+__mac_syscall
+geteuid
+__mac_syscall
+geteuid
+__mac_syscall
+stat64 /Users/Nikolay.Igotti/Library/Developer/Xcode/DerivedData/simpleui-deyecdhvvddjkcetyqoasfdfurua/Build/Products/Debug-iphonesimulator/TextInputUI.framework/TextInputUI
+stat64 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/TextInputUI.framework/TextInputUI
+stat64 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/TextInput/kbd
+kevent_id
+lstat64
+lstat64
+lstat64
+stat64 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Foundation.framework
+access /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Foundation.framework
+stat64 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Foundation.framework
+access /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Foundation.framework
+open_nocancel /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Foundation.framework
+fstatfs64
+getdirentries64
+close_nocancel
+stat64 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Foundation.framework
+open_nocancel /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Foundation.framework
+fstatfs64
+getdirentries64
+close_nocancel
+open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Foundation.framework/Info.plist
+fstat64
+read
+close
+open_nocancel /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Foundation.framework
+fstatfs64
+getdirentries64
+close_nocancel
+open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot//System/Library/FeatureFlags/GlobalDisclosures.plist
+lseek
+pread
+close
+open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot//System/Library/FeatureFlags/ProfilesDisclosures.plist
+open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot//System/Library/FeatureFlags/SettingsDisclosures.plist
+open /Users/Nikolay.Igotti/Library/Developer/CoreSimulator/Devices/99278DD2-6986-4118-8C22-A4EE706D0CD6/data//Library/Preferences/FeatureFlags/GlobalDisclosures.plist
+open /Users/Nikolay.Igotti/Library/Developer/CoreSimulator/Devices/99278DD2-6986-4118-8C22-A4EE706D0CD6/data//Library/Preferences/FeatureFlags/ProfilesDisclosures.plist
+open /Users/Nikolay.Igotti/Library/Developer/CoreSimulator/Devices/99278DD2-6986-4118-8C22-A4EE706D0CD6/data//Library/Preferences/FeatureFlags/SettingsDisclosures.plist
+open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot//System/Library/FeatureFlags/Domain/UIKit.plist
+lseek
+pread
+close
+open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot//System/Library/FeatureFlags/Global.plist
+lseek
+pread
+close
+open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot//System/Library/FeatureFlags/Profiles.plist
+open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot//System/Library/FeatureFlags/Settings.plist
+open /Users/Nikolay.Igotti/Library/Developer/CoreSimulator/Devices/99278DD2-6986-4118-8C22-A4EE706D0CD6/data//Library/Preferences/FeatureFlags/Domain/UIKit.plist
+open /Users/Nikolay.Igotti/Library/Developer/CoreSimulator/Devices/99278DD2-6986-4118-8C22-A4EE706D0CD6/data//Library/Preferences/FeatureFlags/Global.plist
+open /Users/Nikolay.Igotti/Library/Developer/CoreSimulator/Devices/99278DD2-6986-4118-8C22-A4EE706D0CD6/data//Library/Preferences/FeatureFlags/Profiles.plist
+open /Users/Nikolay.Igotti/Library/Developer/CoreSimulator/Devices/99278DD2-6986-4118-8C22-A4EE706D0CD6/data//Library/Preferences/FeatureFlags/Settings.plist
+open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot//System/Library/FeatureFlags/GlobalDisclosures.plist
+lseek
+pread
+close
+open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot//System/Library/FeatureFlags/ProfilesDisclosures.plist
+open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot//System/Library/FeatureFlags/SettingsDisclosures.plist
+open /Users/Nikolay.Igotti/Library/Developer/CoreSimulator/Devices/99278DD2-6986-4118-8C22-A4EE706D0CD6/data//Library/Preferences/FeatureFlags/GlobalDisclosures.plist
+open /Users/Nikolay.Igotti/Library/Developer/CoreSimulator/Devices/99278DD2-6986-4118-8C22-A4EE706D0CD6/data//Library/Preferences/FeatureFlags/ProfilesDisclosures.plist
+open /Users/Nikolay.Igotti/Library/Developer/CoreSimulator/Devices/99278DD2-6986-4118-8C22-A4EE706D0CD6/data//Library/Preferences/FeatureFlags/SettingsDisclosures.plist
+open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot//System/Library/FeatureFlags/Domain/UIKit.plist
+lseek
+pread
+close
+open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot//System/Library/FeatureFlags/Global.plist
+lseek
+pread
+close
+open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot//System/Library/FeatureFlags/Profiles.plist
+open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot//System/Library/FeatureFlags/Settings.plist
+open /Users/Nikolay.Igotti/Library/Developer/CoreSimulator/Devices/99278DD2-6986-4118-8C22-A4EE706D0CD6/data//Library/Preferences/FeatureFlags/Domain/UIKit.plist
+open /Users/Nikolay.Igotti/Library/Developer/CoreSimulator/Devices/99278DD2-6986-4118-8C22-A4EE706D0CD6/data//Library/Preferences/FeatureFlags/Global.plist
+open /Users/Nikolay.Igotti/Library/Developer/CoreSimulator/Devices/99278DD2-6986-4118-8C22-A4EE706D0CD6/data//Library/Preferences/FeatureFlags/Profiles.plist
+open /Users/Nikolay.Igotti/Library/Developer/CoreSimulator/Devices/99278DD2-6986-4118-8C22-A4EE706D0CD6/data//Library/Preferences/FeatureFlags/Settings.plist
+stat64 /Users/Nikolay.Igotti/Library/Developer/Xcode/DerivedData/simpleui-deyecdhvvddjkcetyqoasfdfurua/Build/Products/Debug-iphonesimulator/WebKitLegacy.framework/WebKitLegacy
+kevent_id
+workq_kernreturn
+stat64 /Users/Nikolay.Igotti/Library/Developer/Xcode/DerivedData/simpleui-deyecdhvvddjkcetyqoasfdfurua/Build/Products/Debug-iphonesimulator/ManagedConfiguration.framework/ManagedConfiguration
+kevent_id
+workq_kernreturn
+workq_kernreturn
+ulock_wait
+ulock_wake
+kevent_id
+workq_kernreturn
+bsdthread_ctl
+kevent_id
+workq_kernreturn
+workq_kernreturn
+write_nocancel
+write_nocancel
+workq_kernreturn
+workq_kernreturn
+workq_kernreturn
+workq_kernreturn
+workq_kernreturn
+workq_kernreturn
+kevent_id
+workq_kernreturn
+bsdthread_create
+psynch_cvwait
+thread_selfid
+proc_info
+psynch_cvbroad
+psynch_mutexwait
+kevent_qos
+psynch_mutexdrop
+workq_kernreturn
+kevent_id
+workq_kernreturn
+kevent_id
+workq_kernreturn
+kevent_id
+workq_kernreturn
+kevent_id
+workq_kernreturn
+kevent_id
+workq_kernreturn
+kevent_id
+workq_kernreturn
+kevent_id
+workq_kernreturn
+kevent_id
+workq_kernreturn
+kevent_id
+workq_kernreturn
+kevent_id
+workq_kernreturn
+kevent_id
+workq_kernreturn
+kevent_id
+workq_kernreturn
+geteuid
+__mac_syscall
+geteuid
+__mac_syscall
+kevent_id
+workq_kernreturn
+kevent_id
+workq_kernreturn
+geteuid
+__mac_syscall
+geteuid
+__mac_syscall
+geteuid
+__mac_syscall
+geteuid
+__mac_syscall
+geteuid
+__mac_syscall
+kevent_id
+workq_kernreturn
+kevent_id
+workq_kernreturn
+kevent_id
+workq_kernreturn
+kevent_id
+workq_kernreturn
+kevent_id
+bsdthread_ctl
+kevent_id
+bsdthread_ctl
+bsdthread_ctl
+workq_kernreturn
+bsdthread_ctl
+bsdthread_ctl
+kevent_id
+workq_kernreturn
+bsdthread_ctl
+workq_kernreturn
+kevent_id
+workq_kernreturn
+kevent_id
+workq_kernreturn
+kevent_id
+workq_kernreturn
+kevent_id
+workq_kernreturn
+kevent_id
+workq_kernreturn
+kevent_id
+workq_kernreturn
+kevent_id
+workq_kernreturn
+kevent_id
+workq_kernreturn
+kevent_id
+workq_kernreturn
+psynch_cvwait
+psynch_cvsignal
+psynch_cvwait
+psynch_cvsignal
+bsdthread_ctl
+kevent_id
+workq_kernreturn
+kevent_id
+workq_kernreturn
+kevent_id
+workq_kernreturn
+
+
+
+

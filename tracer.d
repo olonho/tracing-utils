@@ -6,6 +6,13 @@ dtrace:::BEGIN
     gTargetPID = -1;
 }
 
+syscall::exec*:return
+/ ((pid == gTargetPID) || progenyof(gTargetPID)) /
+{
+    // Slow things down a bit.
+    chill(10000000);
+}
+
 /*
  * Capture target launch (success)
  */
@@ -14,7 +21,7 @@ proc:::exec-success
 {
     gTargetPID = pid;
     printf("started %s\n", execname);
-    system("sudo dtrace -qws child-ui.d -p %d", pid);
+    system("sudo dtrace -qws child-all-syscalls.d -p %d", pid);
 }
 
 
