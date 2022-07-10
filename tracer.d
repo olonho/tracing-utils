@@ -7,10 +7,10 @@ dtrace:::BEGIN
 }
 
 syscall::exec*:return
-/ ((pid == gTargetPID) || progenyof(gTargetPID)) /
+/ pid == $pid /
 {
     // Slow things down a bit.
-    chill(10000000);
+    //chill(100000000);
 }
 
 /*
@@ -21,9 +21,16 @@ proc:::exec-success
 {
     gTargetPID = pid;
     printf("started %s\n", execname);
-    system("sudo dtrace -qws child-all-syscalls.d -p %d", pid);
 }
 
+/* Exact syscall name here is not too important, it must be one of few firstr syscall executed */
+syscall::workq_kernreturn:entry
+/ pid == gTargetPID && traced == 0 /
+{
+    printf("Will start tracing from %s\n", probefunc);
+    traced = 1;
+    system("sudo dtrace -qws child-ui-ops.d -p %d", pid);
+}
 
 syscall::*exit:entry
 / pid == gTargetPID /
@@ -31,6 +38,7 @@ syscall::*exit:entry
     gTargetPID = -1;        /* invalidate target pid */
 }
 
+/*
 // Demo of how we could track syscalls in children, if needed.
 syscall::open*:entry
 / ((pid == gTargetPID) || progenyof(gTargetPID)) /
@@ -47,4 +55,4 @@ syscall::open*:return
 
     //printf("open for %s: <%s> #%d\n", this->op_kind, this->path0, arg0);
 }
-
+*/
