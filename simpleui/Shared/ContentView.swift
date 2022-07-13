@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var count = 0
+    @State private var count = 2.0
     var body: some View {
         Text("Hello, world!: \(count)")
             .padding()
@@ -16,6 +16,11 @@ struct ContentView: View {
             print("Button tapped!")
             count+=1
         }
+        .scaleEffect(count)
+        .animation(
+            .linear(duration: 1)
+            .repeatForever(autoreverses: true),
+            value: count)
     }
 }
 
