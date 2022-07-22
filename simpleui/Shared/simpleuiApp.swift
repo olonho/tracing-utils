@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct simpleuiApp: App {
+    @State private var current: Int = 10
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DrawingView(current: $current)
         }
     }
 }

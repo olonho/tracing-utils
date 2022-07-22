@@ -29,3 +29,32 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+var x = 10
+
+struct DrawingView: UIViewRepresentable {
+
+    @Binding var current: Int
+    
+    private let view = UIView()
+
+    var layer: CALayer? {
+        view.layer
+    }
+    
+    var shapeLayer: CAShapeLayer = CAShapeLayer()
+
+    func makeUIView(context: Context) -> UIView {
+        current = 10
+        shapeLayer.path = UIBezierPath(roundedRect: CGRect(x: 64, y: 64, width: 160, height: 160), cornerRadius: 50).cgPath
+        shapeLayer.fillColor = UIColor.red.cgColor
+        view.layer.addSublayer(shapeLayer)
+        return view
+    }
+
+    func updateUIView(_ uiView: UIView, context: Context) {
+        print("updateUIView ", current)
+        shapeLayer.path = UIBezierPath(roundedRect: CGRect(x: 64 + current, y: 64 + current, width: 160, height: 160), cornerRadius: 50).cgPath
+        current = (current + 2) % 100
+    }
+}
