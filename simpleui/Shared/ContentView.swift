@@ -33,7 +33,6 @@ struct ContentView_Previews: PreviewProvider {
 var x = 10
 
 struct DrawingView: UIViewRepresentable {
-
     @Binding var current: Int
     
     private let view = UIView()
@@ -45,7 +44,9 @@ struct DrawingView: UIViewRepresentable {
     var shapeLayer: CAShapeLayer = CAShapeLayer()
 
     func makeUIView(context: Context) -> UIView {
-        current = 10
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+            current = (current + 2) % 100
+        }
         shapeLayer.path = UIBezierPath(roundedRect: CGRect(x: 64, y: 64, width: 160, height: 160), cornerRadius: 50).cgPath
         shapeLayer.fillColor = UIColor.red.cgColor
         view.layer.addSublayer(shapeLayer)
@@ -55,6 +56,5 @@ struct DrawingView: UIViewRepresentable {
     func updateUIView(_ uiView: UIView, context: Context) {
         print("updateUIView ", current)
         shapeLayer.path = UIBezierPath(roundedRect: CGRect(x: 64 + current, y: 64 + current, width: 160, height: 160), cornerRadius: 50).cgPath
-        current = (current + 2) % 100
     }
 }
