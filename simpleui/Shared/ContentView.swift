@@ -30,8 +30,6 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-var x = 10
-
 struct DrawingView: UIViewRepresentable {
     @Binding var current: Int
     
