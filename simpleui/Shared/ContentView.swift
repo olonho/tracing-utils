@@ -53,6 +53,6 @@ struct DrawingView: UIViewRepresentable {
 
     func updateUIView(_ uiView: UIView, context: Context) {
         print("updateUIView ", current)
-        shapeLayer.path = UIBezierPath(roundedRect: CGRect(x: 64 + current, y: 64 + current, width: 160, height: 160), cornerRadius: 50).cgPath
+        shapeLayer.path = UIBezierPath(roundedRect: CGRect(x: 64 + current, y: 64 + current, width: 120 + Int(current % 70), height: 160), cornerRadius: 20.0 + CGFloat(current % 50)).cgPath
     }
 }
