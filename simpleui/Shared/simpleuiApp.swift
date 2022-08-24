@@ -12,7 +12,8 @@ struct simpleuiApp: App {
     @State private var current: Int = 10
     var body: some Scene {
         WindowGroup {
-            DrawingView(current: $current)
+            //DrawingView(current: $current)
+            ContentView()
         }
     }
 }

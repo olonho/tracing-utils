@@ -8,19 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var count = 2.0
+    @State var scale = 1.0
+    var animation: Animation {
+        Animation.easeInOut
+        .repeatForever(autoreverses: false)
+    }
     var body: some View {
-        Text("Hello, world!: \(count)")
-            .padding()
-        Button("Click me") {
-            print("Button tapped!")
-            count+=1
+        VStack(alignment: .center) {
+            Button("Hello") {}
+                .onAppear {
+                    let baseAnimation = Animation.easeInOut(duration: 8)
+                    let repeated = baseAnimation.repeatForever(autoreverses: true)
+                    withAnimation(repeated) {
+                        scale = 2.5
+                    }
+                }
+                .foregroundColor(Color.white)
+                .background(Color.blue)
+                .scaleEffect(scale, anchor: .leading)
         }
-        .scaleEffect(count)
-        .animation(
-            .linear(duration: 1)
-            .repeatForever(autoreverses: true),
-            value: count)
     }
 }
 
@@ -42,7 +48,7 @@ struct DrawingView: UIViewRepresentable {
     var shapeLayer: CAShapeLayer = CAShapeLayer()
 
     func makeUIView(context: Context) -> UIView {
-        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+        Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true) { timer in
             current = (current + 2) % 100
         }
         shapeLayer.path = UIBezierPath(roundedRect: CGRect(x: 64, y: 64, width: 160, height: 160), cornerRadius: 50).cgPath
@@ -52,7 +58,7 @@ struct DrawingView: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: UIView, context: Context) {
-        print("updateUIView ", current)
+        //print("updateUIView ", current)
         shapeLayer.path = UIBezierPath(roundedRect: CGRect(x: 64 + current, y: 64 + current, width: 120 + Int(current % 70), height: 160), cornerRadius: 20.0 + CGFloat(current % 50)).cgPath
     }
 }
