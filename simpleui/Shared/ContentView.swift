@@ -7,6 +7,29 @@
 
 import SwiftUI
 
+struct ImageBackgroundView: View {
+    @State private var index = 0
+
+    private let images: [Image] = ["trash", "star", "circle", "circle.fill", "square", "cloud"].map{ Image(systemName: $0) }
+    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
+    var body: some View {
+        ZStack {
+            ForEach(images.indices, id: \.self) { imageIndex in
+                    self.images[imageIndex]
+                        .resizable()
+                        .transition(.slide)
+                        .opacity(imageIndex == self.index ? 1.0 : 0.0)
+                }
+            }
+            .onReceive(timer) { _ in
+                withAnimation {
+                    self.index = self.index < self.images.count - 1 ? self.index + 1 : 0
+                }
+            }
+        }
+}
+
 struct ContentView: View {
     @State var scale = 1.0
     var animation: Animation {
@@ -26,6 +49,7 @@ struct ContentView: View {
                 .foregroundColor(Color.white)
                 .background(Color.blue)
                 .scaleEffect(scale, anchor: .leading)
+                .transition(.opacity)
         }
     }
 }

@@ -13,7 +13,8 @@ struct simpleuiApp: App {
     var body: some Scene {
         WindowGroup {
             //DrawingView(current: $current)
-            ContentView()
+            //ContentView()
+            ImageBackgroundView()
         }
     }
 }
