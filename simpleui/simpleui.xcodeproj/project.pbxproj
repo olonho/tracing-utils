@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		353AB83C28DA524C009B4A4A /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353AB83B28DA524C009B4A4A /* Animations.swift */; };
+		353AB83D28DA524C009B4A4A /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353AB83B28DA524C009B4A4A /* Animations.swift */; };
 		35A7A6A928718950004EDC98 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A7A6A828718950004EDC98 /* Tests_iOS.swift */; };
 		35A7A6AB28718950004EDC98 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A7A6AA28718950004EDC98 /* Tests_iOSLaunchTests.swift */; };
 		35A7A6B528718950004EDC98 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A7A6B428718950004EDC98 /* Tests_macOS.swift */; };
@@ -37,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		353AB83B28DA524C009B4A4A /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		35A7A6902871894F004EDC98 /* simpleuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simpleuiApp.swift; sourceTree = "<group>"; };
 		35A7A6912871894F004EDC98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		35A7A69228718950004EDC98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,6 +100,7 @@
 		35A7A68F2871894F004EDC98 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				353AB83B28DA524C009B4A4A /* Animations.swift */,
 				35A7A6902871894F004EDC98 /* simpleuiApp.swift */,
 				35A7A6912871894F004EDC98 /* ContentView.swift */,
 				35A7A69228718950004EDC98 /* Assets.xcassets */,
@@ -301,6 +305,7 @@
 			files = (
 				35A7A6BA28718950004EDC98 /* ContentView.swift in Sources */,
 				35A7A6B828718950004EDC98 /* simpleuiApp.swift in Sources */,
+				353AB83C28DA524C009B4A4A /* Animations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +315,7 @@
 			files = (
 				35A7A6BB28718950004EDC98 /* ContentView.swift in Sources */,
 				35A7A6B928718950004EDC98 /* simpleuiApp.swift in Sources */,
+				353AB83D28DA524C009B4A4A /* Animations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
