@@ -14,7 +14,8 @@ struct simpleuiApp: App {
         WindowGroup {
             //DrawingView(current: $current)
             //ContentView()
-            ImageBackgroundView()
+            //ImageBackgroundView()
+            Animation3()
         }
     }
 }
