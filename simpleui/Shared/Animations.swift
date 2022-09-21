@@ -9,10 +9,9 @@ import Foundation
 import SwiftUI
 
 private struct ClickMe: View {
-    let text: String
     let action: () -> Void
     var body: some View {
-        Button(text, action: action)
+        Button("Click Me", action: action)
             .padding()
             .foregroundColor(Color.white)
             .background(Color.blue)
@@ -28,7 +27,7 @@ struct Animation1: View {
                 .fill(enabled ? Color.green : Color.red)
                 .animation(.easeIn(duration: 3), value: enabled)
                 .frame(width: nil, height: 50)
-            ClickMe(text: "Click Me") {
+            ClickMe {
                 enabled.toggle()
             }
             Spacer()
@@ -45,7 +44,7 @@ struct Animation2: View {
                 .opacity(enabled ? 1 : 0)
                 .animation(.easeIn(duration: 3), value: enabled)
                 .frame(width: nil, height: 50)
-            ClickMe(text: "Click Me") {
+            ClickMe {
                 enabled.toggle()
             }
             Spacer()
@@ -72,7 +71,7 @@ struct Animation3: View {
             .frame(width: 150, height: 150)
             .background(color)
             .clipped()
-            ClickMe(text: "Click Me") {
+            ClickMe {
                 let value = Int.random(in: 0...0xFFFFFF)
                 withAnimation(.easeInOut(duration: 1)) {
                     pages.removeAll()
@@ -89,6 +88,35 @@ struct Animation3: View {
     }
 }
 
+struct Animation8: View {
+    @State var enabled = true
+    @State var text = "Hello, World!"
+    var body: some View {
+        VStack {
+            if (enabled) {
+                Text(text)
+                    .transition(.asymmetric(
+                        insertion: .move(edge: .top),
+                        removal: .move(edge: .top)))
+            }
+            ClickMe {
+                text = enabled ? "Disappearing" : "Appearing"
+                if (!enabled) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                        // this is not a good solution, see the best one here
+                        // https://www.avanderlee.com/swiftui/withanimation-completion-callback/
+                        text = "Hello, World!"
+                    }
+                }
+                withAnimation(.easeOut(duration: 1.5)) {
+                    enabled.toggle()
+                }
+            }
+        }
+        .clipped()
+    }
+}
+
 struct Animation9: View {
     @State var enabled = true
     var body: some View {
@@ -102,7 +130,7 @@ struct Animation9: View {
                 }
             }
             .frame(width: nil, height: 20)
-            ClickMe(text: "Click Me") {
+            ClickMe {
                 withAnimation(.easeOut(duration: 1.5)) {
                     enabled.toggle()
                 }
