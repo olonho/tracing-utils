@@ -8,6 +8,19 @@
 import Foundation
 import SwiftUI
 
+private func intAsColor(value: Int) -> Color {
+    return Color.init(
+        .sRGB,
+        red: Double((value >> 16) & 0xff) / 255,
+        green: Double((value >> 8) & 0xff) / 255,
+        blue: Double((value) & 0xff) / 255,
+        opacity: 1)
+}
+
+private func intAsHex(value: Int) -> String {
+    return String(format:"%06X", value)
+}
+
 private struct ClickMe: View {
     let action: () -> Void
     var body: some View {
@@ -59,7 +72,7 @@ struct Animation3: View {
         VStack {
             ZStack {
                 ForEach(pages, id: \.self) { page in // show received results
-                    Text(String(format:"%06X", page))
+                    Text(intAsHex(value: page))
                         .foregroundColor(color)
                         .colorInvert()
                         .frame(width: 150, height: 150)
@@ -76,12 +89,7 @@ struct Animation3: View {
                 withAnimation(.easeInOut(duration: 1)) {
                     pages.removeAll()
                     pages.append(value)
-                    color = Color.init(
-                        .sRGB,
-                        red: Double((value >> 16) & 0xff) / 255,
-                        green: Double((value >> 8) & 0xff) / 255,
-                        blue: Double((value) & 0xff) / 255,
-                        opacity: 1)
+                    color = intAsColor(value: value)
                 }
             }
         }
@@ -94,9 +102,7 @@ struct Animation7: View {
         VStack {
             if (enabled) {
                 Text("Hello, World!")
-                    .transition(.asymmetric(
-                        insertion: .move(edge: .top),
-                        removal: .move(edge: .top)))
+                    .transition(.move(edge: .top))
             }
             ClickMe {
                 withAnimation(.easeOut(duration: 1.5)) {
@@ -115,9 +121,7 @@ struct Animation8: View {
         VStack {
             if (enabled) {
                 Text(text)
-                    .transition(.asymmetric(
-                        insertion: .move(edge: .top),
-                        removal: .move(edge: .top)))
+                    .transition(.move(edge: .top))
             }
             ClickMe {
                 text = enabled ? "Disappearing" : "Appearing"
@@ -149,9 +153,7 @@ struct Animation9: View {
             ZStack {
                 if (enabled) {
                     Text("Hello, world!")
-                        .transition(.asymmetric(
-                            insertion: .opacity.combined(with: .move(edge: .top)),
-                            removal: .opacity.combined(with: .move(edge: .top))))
+                        .transition(.opacity.combined(with: .move(edge: .top)))
                 }
             }
             .frame(width: nil, height: 20)
@@ -162,5 +164,29 @@ struct Animation9: View {
             }
         }
         .clipped()
+    }
+}
+
+struct Animation11: View {
+    @State private var pages: [Int] = [0]
+    var body: some View {
+        VStack {
+            ForEach(pages, id: \.self) { page in // show received results
+                let color = intAsColor(value: page)
+                Text(intAsHex(value: page))
+                    .foregroundColor(color)
+                    .colorInvert()
+                    .frame(width: 150, height: 150)
+                    .background(color)
+                    .transition(.opacity)
+            }
+            ClickMe {
+                let value = Int.random(in: 0...0xFFFFFF)
+                withAnimation(.easeInOut(duration: 1)) {
+                    pages.removeAll()
+                    pages.append(value)
+                }
+            }
+        }
     }
 }
