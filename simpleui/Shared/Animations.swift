@@ -88,8 +88,28 @@ struct Animation3: View {
     }
 }
 
-struct Animation8: View {
+struct Animation7: View {
     @State var enabled = true
+    var body: some View {
+        VStack {
+            if (enabled) {
+                Text("Hello, World!")
+                    .transition(.asymmetric(
+                        insertion: .move(edge: .top),
+                        removal: .move(edge: .top)))
+            }
+            ClickMe {
+                withAnimation(.easeOut(duration: 1.5)) {
+                    enabled.toggle()
+                }
+            }
+        }
+        .clipped()
+    }
+}
+
+struct Animation8: View {
+    @State var enabled = false
     @State var text = "Hello, World!"
     var body: some View {
         VStack {
@@ -114,6 +134,11 @@ struct Animation8: View {
             }
         }
         .clipped()
+        .onAppear{
+            withAnimation(.easeOut(duration: 1.5)) {
+                enabled = true
+            }
+        }
     }
 }
 
