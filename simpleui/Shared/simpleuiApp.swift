@@ -15,7 +15,7 @@ struct simpleuiApp: App {
             //DrawingView(current: $current)
             //ContentView()
             //ImageBackgroundView()
-            Animation1()
+            Animation3()
         }
     }
 }

@@ -52,46 +52,42 @@ struct Animation2: View {
 }
 
 struct Animation3: View {
-    @State var currentPage = 0
-    @State var enabled = true
-    @State var pageEnabled = 0
-    @State var pageDisabled = 0
+    @State private var color = Color.black
+    @State private var pages: [Int] = [0]
     var body: some View {
         VStack {
-            if (enabled){
-                ColorBoxTextOnly(value: currentPage)
-                    .transition(.asymmetric(insertion: .opacity, removal: .slide))
-                    .zIndex(1)
-            } else {
-                ColorBoxTextOnly(value: currentPage)
-                    .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .top)))
-                    .zIndex(1)
+            ZStack {
+                ForEach(pages, id: \.self) { page in // show received results
+                    Text(String(format:"%06X", page))
+                        .foregroundColor(color)
+                        .colorInvert()
+                        .frame(width: 150, height: 150)
+                        .transition(.asymmetric(
+                            insertion: .opacity.combined(with: .move(edge: .trailing)),
+                            removal: .opacity.combined(with: .move(edge: .top))))
+                }
             }
+            .frame(width: 150, height: 150)
+            .background(color)
+            .clipped()
             Button("Click Me") {
-                enabled.toggle()
-                currentPage = Int.random(in: 0...0xFFFFFF)
+                withAnimation(.easeInOut(duration: 1)) {
+                    let value = Int.random(in: 0...0xFFFFFF)
+                    pages.removeAll()
+                    pages.append(value)
+                    color = Color.init(
+                        .sRGB,
+                        red: Double((value >> 16) & 0xff) / 255,
+                        green: Double((value >> 8) & 0xff) / 255,
+                        blue: Double((value) & 0xff) / 255,
+                        opacity: 1)
+                }
             }
             .padding()
             .foregroundColor(Color.white)
             .background(Color.blue)
             .clipShape(Capsule())
         }
-    }
-}
-
-struct ColorBoxTextOnly: View {
-    let value: Int
-    var body: some View {
-        let color = Color.init(
-            .sRGB,
-            red: Double((value >> 16) & 0xff) / 255,
-            green: Double((value >> 8) & 0xff) / 255,
-            blue: Double((value) & 0xff) / 255,
-            opacity: 1)
-        Text(String(format:"%06X", value))
-            .frame(width: 150, height: 150)
-            .background(color)
-//            .animation(.easeInOut(duration: 1), value: value)
     }
 }
 
