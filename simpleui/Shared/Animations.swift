@@ -190,3 +190,28 @@ struct Animation11: View {
         }
     }
 }
+
+struct Animation12: View {
+    @State var enabled = false
+    var body: some View {
+        VStack {
+            let border = enabled ? 5.0 : 20.0
+            let color = enabled ? Color.secondary : Color.primary
+            let rect = enabled
+            ? CGRect(x: 100, y: 100, width: 300, height: 300)
+            : CGRect(x: 0, y: 0, width: 100, height: 100)
+            Canvas { context, size in
+                // unfortunately the canvas does not support animation
+                // note that rect and color are animated outside this scope
+                context.fill(Path(rect), with: .color(color))
+            }
+            .frame(width: nil, height: 500)
+            .border(.green, width: border)
+            ClickMe {
+                withAnimation {
+                    enabled.toggle()
+                }
+            }
+        }
+    }
+}
