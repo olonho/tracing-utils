@@ -96,6 +96,28 @@ struct Animation3: View {
     }
 }
 
+struct Animation4: View {
+    @State var enabled = false
+    var body: some View {
+        HStack {
+            VStack(alignment: .leading) {
+                Image(enabled ? "img" : "ic_launcher_background")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(minWidth: 100, maxWidth: enabled ? nil : 150,
+                           minHeight: 100, maxHeight: enabled ? nil : 150)
+                    .background(Color.yellow)
+                ClickMe {
+                    withAnimation(.easeOut(duration: 1.5)) {
+                        enabled.toggle()
+                    }
+                }
+            }
+            Spacer()
+        }
+    }
+}
+
 struct Animation7: View {
     @State var enabled = true
     var body: some View {
