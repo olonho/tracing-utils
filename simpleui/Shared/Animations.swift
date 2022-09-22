@@ -118,6 +118,10 @@ struct Animation4: View {
     }
 }
 
+// Animation5 - It is hard to define sequence of animations
+
+// Animation6 - There is no access to EnterExitState
+
 struct Animation7: View {
     @State var enabled = true
     var body: some View {
@@ -186,6 +190,42 @@ struct Animation9: View {
             }
         }
         .clipped()
+    }
+}
+
+struct AnimatedBox: View {
+    @Binding var enabled: Bool
+    var animation: Animation
+    var body: some View {
+        ZStack {
+            GeometryReader { metrics in
+                Color.red
+                    .frame(width: 30, height: 30)
+                    .offset(x: enabled ? metrics.size.width - 30 : 0, y: 0)
+                    .animation(enabled ? animation : .default, value: enabled)
+            }
+        }
+        .background(Color.yellow)
+        .frame(width: nil, height: 30)
+        .padding()
+    }
+}
+
+struct Animation10: View {
+    @State var enabled = false
+    var body: some View {
+        VStack {
+            // there is no ability to use the same ways to init animation as in Compose
+            Text("easeIn(duration: 1)")
+            AnimatedBox(enabled: $enabled, animation: .easeIn(duration: 1))
+            Text("interactiveSpring()")
+            AnimatedBox(enabled: $enabled, animation: .interactiveSpring())
+            Text("interpolatingSpring(stiffness: 10, damping: 3)")
+            AnimatedBox(enabled: $enabled, animation: .interpolatingSpring(stiffness: 20, damping: 3))
+            ClickMe {
+                enabled.toggle()
+            }
+        }
     }
 }
 
